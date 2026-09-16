@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>東京 7 天 6 夜輕鬆自由行 (池袋京王版)</title>
+  <style>
+    :root {
+      --primary: #2d5a27;
+      --bg: #f4f6f8;
+      --card-bg: #ffffff;
+      --text: #333333;
+      --accent: #e67e22;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      padding-bottom: 70px;
+    }
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 16px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 { margin: 0; font-size: 1.2rem; }
+    header p { margin: 4px 0 0 0; font-size: 0.85rem; opacity: 0.9; }
+    
+    .nav-tabs {
+      display: flex;
+      overflow-x: auto;
+      background: white;
+      padding: 8px 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      white-space: nowrap;
+    }
+    .tab-btn {
+      border: none;
+      background: #eef2f5;
+      color: #555;
+      padding: 8px 14px;
+      margin: 0 4px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .content { padding: 12px; }
+    .day-panel { display: none; }
+    .day-panel.active { display: block; }
+    
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .time-tag {
+      display: inline-block;
+      background: #eef7ee;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .spot-title {
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+    }
+    .desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .map-btn {
+      display: inline-block;
+      background: #2196F3;
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    
+    .hotel-info {
+      background: #fff8e7;
+      border-left: 4px solid var(--accent);
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>東京 7 天 6 夜輕鬆自由行 ⛩️</h1>
+  <p>10/19 (一) - 10/25 (日) | 4人同行</p>
+</header>
+
+<div class="nav-tabs" id="tabContainer">
+  <button class="tab-btn active" onclick="switchDay(1)">D1 10/19</button>
+  <button class="tab-btn" onclick="switchDay(2)">D2 10/20</button>
+  <button class="tab-btn" onclick="switchDay(3)">D3 10/21</button>
+  <button class="tab-btn" onclick="switchDay(4)">D4 10/22</button>
+  <button class="tab-btn" onclick="switchDay(5)">D5 10/23</button>
+  <button class="tab-btn" onclick="switchDay(6)">D6 10/24</button>
+  <button class="tab-btn" onclick="switchDay(7)">D7 10/25</button>
+</div>
+
+<div class="content">
+
+  <!-- Day 1 -->
+  <div id="day1" class="day-panel active">
+    <div class="hotel-info">
+      🏨 <b>本日住宿</b>：Keio Presso Inn Ikebukuro（京王普雷索酒店 池袋）<br>
+      📍 <b>交通提示</b>：池袋站東口（南）/ 39號出口步行4分鐘，或東池袋站1號出口步行3分鐘。
+    </div>
+    <div class="card">
+      <span class="time-tag">08:50 - 13:15</span>
+      <div class="spot-title">華航 CI100 啟程飛往東京成田 (NRT T2)</div>
+      <div class="desc">桃園國際機場登機，抵達辦理入境手續與領取行李。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">13:15 - 15:30</span>
+      <div class="spot-title">入境 ➔ 京成Skyliner ➔ JR山手線 ➔ 飯店</div>
+      <div class="desc">搭乘京成Skyliner至日暮里站（36分），轉乘JR山手線至池袋站（12分），步行至京王Presso Inn辦理Check-in與寄放行李。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">17:00 - 19:30</span>
+      <div class="spot-title">銀座商圈採購巡禮</div>
+      <div class="desc">搭乘丸之內線直達銀座站（約20分）。逛 Ginza Karen 行李箱、伊東屋 Itoya 文具、GU / Uniqlo 旗艦店。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">19:30 - 21:00</span>
+      <div class="spot-title">晚餐：中村藤吉本店 銀座店</div>
+      <div class="desc">於 GINZA SIX 4F 享用抹茶甜點與晚餐，或選擇 Negishi 牛舌。之後搭乘丸之內線返回池袋。</div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div id="day2" class="day-panel">
+    <div class="hotel-info">🏨 <b>本日住宿</b>：Keio Presso Inn Ikebukuro</div>
+    <div class="card">
+      <span class="time-tag">07:15 - 08:15</span>
+      <div class="spot-title">出發前往東京迪士尼樂園</div>
+      <div class="desc">從飯店步行3分鐘至「東池袋站」搭乘有樂町線至新木場站（28分），轉乘JR京葉線至舞濱站（6分）。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">08:15 - 20:30</span>
+      <div class="spot-title">東京迪士尼樂園 (Disneyland) 全日遊</div>
+      <div class="desc">開園入場抽 Priority Pass / DPA，維尼拯救蜜蜂記、美女與野獸，觀賞夜間花火遊行。</div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div id="day3" class="day-panel">
+    <div class="hotel-info">🏨 <b>本日住宿</b>：Keio Presso Inn Ikebukuro</div>
+    <div class="card">
+      <span class="time-tag">09:15 - 11:00</span>
+      <div class="spot-title">明治神宮綠意參道散策</div>
+      <div class="desc">從池袋站搭乘JR山手線直達原宿站（13分），享受森林步道與參拜。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">11:00 - 13:30</span>
+      <div class="spot-title">原宿竹下通 & Kiddy Land & @cosme</div>
+      <div class="desc">逛 Chiikawa & Tamagotchi 周邊、美妝旗艦店採購。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">14:00 - 18:30</span>
+      <div class="spot-title">澀谷商圈動漫與潮流採購</div>
+      <div class="desc">搭山手線至澀谷站（3分）。逛澀谷 PARCO 6F (Jump Shop/寶可夢)、MAGNET Animate、MEGA 唐吉訶德。</div>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div id="day4" class="day-panel">
+    <div class="hotel-info">🏨 <b>本日住宿</b>：Keio Presso Inn Ikebukuro</div>
+    <div class="card">
+      <span class="time-tag">07:15 - 08:00</span>
+      <div class="spot-title">池袋 ➔ 東京車站集合</div>
+      <div class="desc">從池袋搭乘丸之內線直達東京站（17分），參加 Klook 富士山一日遊。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">08:00 - 18:30</span>
+      <div class="spot-title">富士山一日遊（河口湖、新倉山、忍野八海）</div>
+      <div class="desc">專車前往河口湖、新倉山淺間公園俯瞰富士山美景與忍野八海。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">18:30 - 20:30</span>
+      <div class="spot-title">東京車站一番街 購物與晚餐</div>
+      <div class="desc">逛 Chiikawa Land 東京車站店、一保堂茶舗。晚餐於東京拉麵街享用。過後搭丸之內線回池袋。</div>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div id="day5" class="day-panel">
+    <div class="hotel-info">🏨 <b>本日住宿</b>：Keio Presso Inn Ikebukuro</div>
+    <div class="card">
+      <span class="time-tag">09:00 - 12:00</span>
+      <div class="spot-title">淺草寺參拜 & 仲見世通</div>
+      <div class="desc">池袋搭丸之內線至赤坂見附，轉銀座線至淺草站（30分）。參拜與買御守，晚餐享用淺草文字燒。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">12:30 - 15:00</span>
+      <div class="spot-title">龜有站：烏龍派出所兩津勘吉銅像巡禮</div>
+      <div class="desc">淺草搭電車至北千住，轉乘JR常磐線至龜有站（20分）。打卡兩津勘吉銅像。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">15:30 - 20:30</span>
+      <div class="spot-title">錦糸町 & 晴空塔 Solamachi 大採購</div>
+      <div class="desc">逛 Bic Camera 錦糸町店（電器/相紙/Tamagotchi）、晴空塔 Solamachi 3F。晚餐享用 Negishi 牛舌。</div>
+    </div>
+  </div>
+
+  <!-- Day 6 -->
+  <div id="day6" class="day-panel">
+    <div class="hotel-info">🏨 <b>本日住宿</b>：APA飯店 - 京成成田站前</div>
+    <div class="card">
+      <span class="time-tag">08:30 - 11:30</span>
+      <div class="spot-title">豐洲市場 & 千客萬來</div>
+      <div class="desc">池袋搭有樂町線至豐洲站（28分）。享用新鮮海鮮丼、生魚片與足湯體驗。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">11:30 - 14:00</span>
+      <div class="spot-title">池袋退房 ➔ 移防至成田 APA 飯店</div>
+      <div class="desc">回池袋取行李，搭JR山手線至日暮里（12分），轉乘京成特急/Skyliner至京成成田站（60分）辦理Check-in。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">14:15 - 20:30</span>
+      <div class="spot-title">AEON MALL 成田 & 成田山參道晚餐</div>
+      <div class="desc">搭接駁公車至 AEON MALL 大採購，傍晚至成田山參道散步，晚餐享用川豐鰻魚飯。</div>
+    </div>
+  </div>
+
+  <!-- Day 7 -->
+  <div id="day7" class="day-panel">
+    <div class="card">
+      <span class="time-tag">09:30 - 12:30</span>
+      <div class="spot-title">成田山新勝寺參拜 & 參道午餐</div>
+      <div class="desc">老街散步參拜，享用在地輕食午餐。</div>
+    </div>
+    <div class="card">
+      <span class="time-tag">13:00 - 17:30</span>
+      <div class="spot-title">京成本線至成田機場 T2 ➔ 免稅店採購 ➔ 返台</div>
+      <div class="desc">搭電車10分鐘至T2，辦理 CI101 報到，免稅店採購（白色戀人/東京香蕉/肌膚之鑰），17:45 班機起飛返台。</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function switchDay(dayNum) {
+    const panels = document.querySelectorAll('.day-panel');
+    panels.forEach(p => p.classList.remove('active'));
+    
+    const btns = document.querySelectorAll('.tab-btn');
+    btns.forEach(b => b.classList.remove('active'));
+    
+    document.getElementById('day' + dayNum).classList.add('active');
+    btns[dayNum - 1].classList.add('active');
+  }
+</script>
+
+</body>
+</html>
